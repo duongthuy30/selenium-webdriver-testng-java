@@ -6,6 +6,7 @@
       <class name="webdriver.Topic_01_Setup_Evn">
         <methods>
           <include name="TC_01_ValidateCurrentUrl"/>
+          <include name="afterClass"/>
           <include name="beforeClass"/>
         </methods>
       </class> <!-- webdriver.Topic_01_Setup_Evn -->
