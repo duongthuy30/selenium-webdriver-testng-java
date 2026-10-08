@@ -1,13 +1,13 @@
-package Topic_16;
+package Exercise;
 
-import java.util.concurrent.TimeUnit;
-
+import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class Topic_16_Exercise {
@@ -17,17 +17,21 @@ public class Topic_16_Exercise {
 
 		@BeforeClass
 		public void beforeClass() {
-			System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
 			driver = new FirefoxDriver();
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 			driver.manage().window().maximize();
-
 		}
 
+		@BeforeMethod
+		public void beforeMethod() {
+		    driver.get("https://alada.vn/tai-khoan/dang-ky.html");
+		}
+		
 		@Test
 		public void Register_01_Empty_Data() {
+
+			
 			// Action
-			driver.get("https://alada.vn/tai-khoan/dang-ky.html");
 			driver.findElement(By.id("txtFirstname")).sendKeys("");
 			driver.findElement(By.id("txtEmail")).sendKeys("");
 			driver.findElement(By.id("txtCEmail")).sendKeys("");
@@ -50,7 +54,6 @@ public class Topic_16_Exercise {
 
 		@Test
 		public void Register_02_Invalid_Email() {
-			driver.get("https://alada.vn/tai-khoan/dang-ky.html");
 			driver.findElement(By.id("txtFirstname")).sendKeys("Thuy Duong");
 			driver.findElement(By.id("txtEmail")).sendKeys("duong.gmailcom");
 			driver.findElement(By.id("txtCEmail")).sendKeys("duong.gmailcom");
@@ -68,7 +71,6 @@ public class Topic_16_Exercise {
 
 		@Test
 		public void Register_03_Incorrect_Confirm_Email() {
-			driver.get("https://alada.vn/tai-khoan/dang-ky.html");
 			driver.findElement(By.id("txtFirstname")).sendKeys("Thuy Duong");
 			driver.findElement(By.id("txtEmail")).sendKeys("duong@gmail.com");
 			driver.findElement(By.id("txtCEmail")).sendKeys("duong1@gmail.com");
@@ -82,7 +84,6 @@ public class Topic_16_Exercise {
 
 		@Test
 		public void Register_04_Password_Less_Than_6_Chars() {
-			driver.get("https://alada.vn/tai-khoan/dang-ky.html");
 			driver.findElement(By.id("txtFirstname")).sendKeys("Thuy Duong");
 			driver.findElement(By.id("txtEmail")).sendKeys("duong@gmail.com");
 			driver.findElement(By.id("txtCEmail")).sendKeys("duong@gmail.com");
@@ -98,7 +99,6 @@ public class Topic_16_Exercise {
 
 		@Test
 		public void Register_05_Incorrect_Confirm_Password() {
-			driver.get("https://alada.vn/tai-khoan/dang-ky.html");
 			driver.findElement(By.id("txtFirstname")).sendKeys("Thuy Duong");
 			driver.findElement(By.id("txtEmail")).sendKeys("duong@gmail.com");
 			driver.findElement(By.id("txtCEmail")).sendKeys("duong@gmail.com");
@@ -111,10 +111,8 @@ public class Topic_16_Exercise {
 					"Mật khẩu phải có ít nhất 6 ký tự");
 		}
 
-	
 		@Test
 		public void Register_06_Invald_Phone_Number() {
-			driver.get("https://alada.vn/tai-khoan/dang-ky.html");
 			driver.findElement(By.id("txtFirstname")).sendKeys("Thuy Duong");
 			driver.findElement(By.id("txtEmail")).sendKeys("duong@gmail.com");
 			driver.findElement(By.id("txtCEmail")).sendKeys("duong@gmail.com");
@@ -149,4 +147,3 @@ public class Topic_16_Exercise {
 		}
 	}
 }
-

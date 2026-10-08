@@ -1,7 +1,6 @@
 package webdriver;
 
-import java.util.concurrent.TimeUnit;
-
+import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -16,12 +15,29 @@ public class Topic_01_Setup_Evn {
 
 	@BeforeClass
 	public void beforeClass() {
-		System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
+
 		driver = new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.manage().window().maximize();
 		driver.get("https://live.techpanda.org/index.php/customer/account/login");
+
 	}
+	// @BeforeClass
+	// public void beforeClass() {
+	// if (osName.startsWith("Windows")) {
+	// Windows
+	// System.setProperty("webdriver.chrome.driver", projectPath +
+	// "\\browserDrivers\\chromedriver.exe");
+	// }else {
+	// Mac
+	// System.setProperty("webdriver.chrome.driver", projectPath +
+	// "/browserDrivers/chromedriver");
+
+	// driver = new FirefoxDriver();
+	// driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	// driver.manage().window().maximize();
+	// driver.get("https://live.techpanda.org/index.php/customer/account/login");
+	// }
 
 	@Test
 	public void TC_01_ValidateCurrentUrl() {
@@ -29,12 +45,12 @@ public class Topic_01_Setup_Evn {
 		String loginPageUrl = driver.getCurrentUrl();
 		Assert.assertEquals(loginPageUrl, "https://live.techpanda.org/index.php/customer/account/login");
 		driver.findElement(By.linkText("SEARCH TERMS"));
-		//driver.findElement(By.xpath("//input[@title='Email Address']"));
+		// driver.findElement(By.xpath("//input[@title='Email Address']"));
 		driver.findElement(By.cssSelector("input[title='Email Address']"));
-		
-		//driver.findElement(By.cssSelector("input[id='email']"));
+
+		// driver.findElement(By.cssSelector("input[id='email']"));
 		driver.findElement(By.id("email"));
-		
+
 		driver.findElement(By.name("login[username]"));
 
 		driver.findElement(By.tagName("a"));
@@ -51,8 +67,9 @@ public class Topic_01_Setup_Evn {
 		// driver.findElement(By.cssSelector("a[href='http://live.techpanda.org/index.php/customer/account/forgotpassword']"))
 		// nhưng nên viết thế này
 		driver.findElement(By.xpath("//a[text()='Forgot Your Password?']"));
-		
-		//driver.findElement(By.xpath("//span[text()=concat('Hello \"John\", What',\"'s happened?\")]"));
+
+		// driver.findElement(By.xpath("//span[text()=concat('Hello \"John\", What',\"'s
+		// happened?\")]"));
 	}
 	// HTML của element Email textbox
 	// <input type="email" autocapitalize="off" autocorrect="off" spellcheck="false"
@@ -126,9 +143,7 @@ public class Topic_01_Setup_Evn {
 	public void afterClass() {
 		driver.quit();
 	}
+
 }
 
 //<a href="http://live.techpanda.org/index.php/catalogsearch/term/popular/" title="Search Terms">Search Terms</a>
-
-
-
