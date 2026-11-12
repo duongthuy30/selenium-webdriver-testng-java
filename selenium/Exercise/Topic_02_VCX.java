@@ -114,6 +114,34 @@ public class Topic_02_VCX {
 				"#reka-combobox-group-v-1-0-48>div", "Hoàn thành");
 		Assert.assertEquals(driver.findElement(By.xpath("//span[text()='1 đã chọn']")).getText(), "1 đã chọn");
 
+		//Checkbox hiển thị tên campain
+		driver.findElement(By.xpath("//span[text()='Hiển thị']/parent::button")).click();
+		By TencpCheckbox = 	By.xpath("//div[@role='group']//span[text()='Tên Campaign']");
+		driver.findElement(TencpCheckbox).click();
+	Assert.assertEquals(driver.findElement(By.xpath("//div[@role='group']/div[1]")).getAttribute("aria-checked"), "false");
+	
+	// Chọn vào Báo cáo
+	jsExecutor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector("a[href='/report']")));
+			driver.findElement(By.xpath("//span[text()='Cột hiển thị']")).click();
+			List<WebElement> allCheckboxs = driver.findElements(By.cssSelector("div.flex-row"));
+					for (WebElement checkbox : allCheckboxs) {
+						if (!checkbox.isSelected()) {
+							checkbox.click();
+							sleepInSecond(1);
+						}}
+						
+			By MaCG = By.cssSelector("button[aria-label='Mã cuộc gọi']");
+			driver.findElement(MaCG).click();
+			Assert.assertEquals(driver.findElement(MaCG).getAttribute("aria-checked"), "false");
+			sleepInSecond(5);
+			driver.findElement(By.cssSelector("button[aria-label='Close']")).click();
+			
+			// Verify 39 cột
+			List<WebElement> cot = driver
+					.findElements(By.cssSelector("thead.sticky>tr:nth-child(2)>th"));
+
+			Assert.assertEquals(cot.size(), 39);
+		
 	}
 
 	public void enterItemInCustomDropdown(String editableLocator, String childLocator, String expectedTextItem) {

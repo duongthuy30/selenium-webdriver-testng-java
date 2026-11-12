@@ -1,7 +1,7 @@
 package learning;
 
 public class Topic_13_Xpath_CSS {
-
+//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     
 	// div[@attribute-name='attribute-value']//tagname[@attribute-name='attribute-value']
 
 //	 Nên chọn locator nào để chạy:

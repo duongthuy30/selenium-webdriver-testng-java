@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Exercise.Topic_21_Exe_Handle_Custom_Dropdown_2">
+      <class name="learning.Topic_42_Handle_Page_Ready">
         <methods>
           <include name="afterClass"/>
-          <include name="TC_02_Huawei"/>
           <include name="beforeClass"/>
+          <include name="TC_01_OrangeHRM"/>
         </methods>
-      </class> <!-- Exercise.Topic_21_Exe_Handle_Custom_Dropdown_2 -->
+      </class> <!-- learning.Topic_42_Handle_Page_Ready -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

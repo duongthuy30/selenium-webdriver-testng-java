@@ -8,11 +8,82 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">5.968</td><td></td><td></td></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">Run on CHROME browser</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">67.476</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Run on FIREFOX browser</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">3</td><td class="num">181.808</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">3</th><th class="num">0</th><th class="num">0</th><th class="num attn">3</th><th class="num">249.284</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">Exercise.Topic_21_Exe_Handle_Custom_Dropdown_2</td><td><a href="#m0">TC_02_Huawei</a></td><td rowspan="1">1791446714690</td><td rowspan="1">2558</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Run on CHROME browser &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">Tech.Topic_03_DataProvider</td><td><a href="#m0">TC_02_OrangeHRM</a></td><td rowspan="3">1794277068834</td><td rowspan="3">22844</td></tr><tr class="passedeven"><td><a href="#m1">TC_02_OrangeHRM</a></td></tr><tr class="passedeven"><td><a href="#m2">TC_02_OrangeHRM</a></td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Run on FIREFOX browser &#8212; failed</th></tr><tr class="failedeven"><td rowspan="3">Tech.Topic_03_DataProvider</td><td><a href="#m3">TC_02_OrangeHRM</a></td><td rowspan="3">1794277134866</td><td rowspan="3">91246</td></tr><tr class="failedeven"><td><a href="#m4">TC_02_OrangeHRM</a></td></tr><tr class="failedeven"><td><a href="#m5">TC_02_OrangeHRM</a></td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">Exercise.Topic_21_Exe_Handle_Custom_Dropdown_2#TC_02_Huawei</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Run on CHROME browser</h2><h3 id="m0">Tech.Topic_03_DataProvider#TC_02_OrangeHRM</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>Peter</td><td>Crouch</td><td>peter628@hotmail.com</td><td>Testing111###</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">Tech.Topic_03_DataProvider#TC_02_OrangeHRM</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>Luka</td><td>Modric</td><td>luka925@hotmail.com</td><td>Testing111###</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">Tech.Topic_03_DataProvider#TC_02_OrangeHRM</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>John</td><td>Terry</td><td>john171@hotmail.com</td><td>Testing111###</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Run on FIREFOX browser</h2><h3 id="m3">Tech.Topic_03_DataProvider#TC_02_OrangeHRM</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>Peter</td><td>Crouch</td><td>peter6850@hotmail.com</td><td>Testing111###</td></tr><tr><th colspan="4">Exception</th></tr><tr><td colspan="4"><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Unable to locate element: //p[text()=&apos;Successfully Saved&apos;]
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: &apos;4.49.0&apos;, revision: &apos;bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.32&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [d8a9d7ce-a5fc-4e97-8996-e82804dfd396, findElement {value=//p[text()=&apos;Successfully Saved&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 159.0.1, moz:accessibilityChecks: false, moz:buildID: 20261102144711, moz:geckodriverVersion: 0.37.1, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 4420, moz:profile: C:\Users\THUYDU~1\AppData\L..., moz:shutdownTimeout: 73000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: d8a9d7ce-a5fc-4e97-8996-e82804dfd396
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:653)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:173)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:417)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:411)
+	at Tech.Topic_03_DataProvider.TC_02_OrangeHRM(Topic_03_DataProvider.java:99)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">Tech.Topic_03_DataProvider#TC_02_OrangeHRM</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>John</td><td>Terry</td><td>john6377@hotmail.com</td><td>Testing111###</td></tr><tr><th colspan="4">Exception</th></tr><tr><td colspan="4"><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Unable to locate element: input[name=&apos;username&apos;]
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: &apos;4.49.0&apos;, revision: &apos;bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.32&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [d8a9d7ce-a5fc-4e97-8996-e82804dfd396, findElement {value=input[name=&apos;username&apos;], using=css selector}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 159.0.1, moz:accessibilityChecks: false, moz:buildID: 20261102144711, moz:geckodriverVersion: 0.37.1, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 4420, moz:profile: C:\Users\THUYDU~1\AppData\L..., moz:shutdownTimeout: 73000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: d8a9d7ce-a5fc-4e97-8996-e82804dfd396
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:653)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:173)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:417)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:411)
+	at Tech.Topic_03_DataProvider.TC_02_OrangeHRM(Topic_03_DataProvider.java:56)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">Tech.Topic_03_DataProvider#TC_02_OrangeHRM</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>Luka</td><td>Modric</td><td>luka4504@hotmail.com</td><td>Testing111###</td></tr><tr><th colspan="4">Exception</th></tr><tr><td colspan="4"><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Unable to locate element: input[name=&apos;username&apos;]
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: &apos;4.49.0&apos;, revision: &apos;bedb24f bedb24f6f703876e7e4c5d506f0d697eb358c720&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.32&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [d8a9d7ce-a5fc-4e97-8996-e82804dfd396, findElement {value=input[name=&apos;username&apos;], using=css selector}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 159.0.1, moz:accessibilityChecks: false, moz:buildID: 20261102144711, moz:geckodriverVersion: 0.37.1, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 4420, moz:profile: C:\Users\THUYDU~1\AppData\L..., moz:shutdownTimeout: 73000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: d8a9d7ce-a5fc-4e97-8996-e82804dfd396
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:653)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:173)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:417)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:411)
+	at Tech.Topic_03_DataProvider.TC_02_OrangeHRM(Topic_03_DataProvider.java:56)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
